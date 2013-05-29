@@ -1,12 +1,13 @@
 (ns tictactoe-client.client-api
   (:gen-class)
-  (:require [clj-http.client :as c]))
+  (:require [clj-http.client :as c]
+            [clojure.tools.reader.edn :as edn]))
 
 (def base-uri "http://localhost:3000/games/")
 
 (defn- read-body
   [resp]
-  (read-string (:body resp)))
+  (edn/read-string (:body resp)))
 
 (defn get-game
   [game-id]
