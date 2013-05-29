@@ -18,8 +18,11 @@ git clone
 ## Examples
 
 tictactoe-client.core=> (create-game)
+
 Winner: 
+
 Game id: 7
+
 Game state:
   [:b :b :b]
   [:b :b :b]
